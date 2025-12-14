@@ -1,0 +1,37 @@
+{
+  "name": "access_codes",
+  "type": "object",
+  "required": [
+    "code",
+    "email",
+    "createdAt",
+    "status"
+  ],
+  "properties": {
+    "email": {
+      "bsonType": "string",
+      "description": "User email from Stripe"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "revoked"
+      ],
+      "bsonType": "string",
+      "description": "Status of the code (active, revoked)"
+    },
+    "createdAt": {
+      "title": "datetime",
+      "bsonType": "string",
+      "description": "Creation date ISO 8601"
+    },
+    "code": {
+      "bsonType": "string",
+      "description": "Unique access code generated for the user"
+    },
+    "planId": {
+      "bsonType": "string",
+      "description": "Plan ID purchased"
+    }
+  }
+}

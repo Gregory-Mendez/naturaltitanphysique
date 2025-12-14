@@ -1,0 +1,23 @@
+{
+  "name": "Body Titan Fitness",
+  "short_name": "BodyTitan",
+  "description": "Application de coaching en musculation par TitanGryx",
+  "theme_color": "#111827",
+  "background_color": "#111827",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "https://static.lumi.new/1e/1ecc140aedc8223004686d783fac93ef.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "https://static.lumi.new/1e/1ecc140aedc8223004686d783fac93ef.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}

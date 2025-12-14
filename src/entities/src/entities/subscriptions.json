@@ -1,0 +1,104 @@
+{
+  "name": "subscriptions",
+  "type": "object",
+  "required": [
+    "userId",
+    "email",
+    "userName",
+    "plan",
+    "status",
+    "amount",
+    "paymentMethod",
+    "startDate",
+    "endDate",
+    "accessPassword",
+    "creator",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "userId": {
+      "bsonType": "string",
+      "description": "User ID from authentication system"
+    },
+    "email": {
+      "bsonType": "string",
+      "description": "User email address"
+    },
+    "userName": {
+      "bsonType": "string",
+      "description": "User display name"
+    },
+    "plan": {
+      "bsonType": "string",
+      "enum": [
+        "seance_individuelle",
+        "suivi_mensuel",
+        "formule_illimitee"
+      ],
+      "description": "Subscription plan type"
+    },
+    "status": {
+      "bsonType": "string",
+      "enum": [
+        "active",
+        "expired",
+        "cancelled",
+        "pending"
+      ],
+      "description": "Subscription status"
+    },
+    "amount": {
+      "bsonType": "number",
+      "description": "Payment amount in euros"
+    },
+    "paymentMethod": {
+      "bsonType": "string",
+      "enum": [
+        "stripe_card",
+        "paypal"
+      ],
+      "description": "Payment method used"
+    },
+    "stripePaymentId": {
+      "bsonType": "string",
+      "description": "Stripe payment intent ID"
+    },
+    "paypalOrderId": {
+      "bsonType": "string",
+      "description": "PayPal order ID"
+    },
+    "startDate": {
+      "bsonType": "string",
+      "title": "datetime",
+      "description": "Subscription start date ISO 8601"
+    },
+    "endDate": {
+      "bsonType": "string",
+      "title": "datetime",
+      "description": "Subscription end date ISO 8601"
+    },
+    "accessPassword": {
+      "bsonType": "string",
+      "description": "Password for accessing locked content (TitanGryx2024)"
+    },
+    "autoRenew": {
+      "bsonType": "bool",
+      "description": "Whether subscription auto-renews"
+    },
+    "creator": {
+      "bsonType": "string",
+      "description": "User who created the record"
+    },
+    "createdAt": {
+      "bsonType": "string",
+      "title": "datetime",
+      "description": "Record creation timestamp ISO 8601"
+    },
+    "updatedAt": {
+      "bsonType": "string",
+      "title": "datetime",
+      "description": "Record last update timestamp ISO 8601"
+    }
+  }
+}

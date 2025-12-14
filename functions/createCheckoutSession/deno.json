@@ -1,0 +1,13 @@
+{
+  "imports": {
+    "@lumi.new/sdk": "npm:@lumi.new/sdk@0.3.3"
+  },
+  "tasks": {
+    "dev": "deno run --allow-net --watch index.ts",
+    "test": "deno test --allow-env",
+    "start": "deno run --allow-net --allow-env index.ts"
+  },
+  "fmt": {
+    "lineWidth": 100
+  }
+}
